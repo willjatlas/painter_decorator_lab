@@ -13,4 +13,14 @@ PaintCan.prototype.isPaintCanEmpty = function(){
     }
 };
 
+PaintCan.prototype.removePaint = function(amount){
+    if (this.isPaintCanEmpty() === true){
+        return "This paint can is empty"
+    }
+    else{
+    this.paintLevel -= amount;
+    }
+};
+
+
 module.exports = PaintCan;
