@@ -30,23 +30,6 @@ Decorator.prototype.checkEnoughPaintForRoom = function(room){
     };
 };
 
-// Decorator.prototype.paintRoom = function(room){
-//     if(this.checkEnoughPaintForRoom(room) === true){
-//         let toPaint =room.area;
-//         while(toPaint > 0){
-//             for(let can of this.paintStock){
-//                 if(can.isPaintCanEmpty() !== true){
-//                     can.removePaint(1);
-//                     toPaint --; 
-//                 }
-//                 else{
-//                     this.remove(can);
-//                 };
-//             };
-//         };
-//         room.paintRoom();
-//     };
-// };
 Decorator.prototype.paintRoom = function(room){
     if(this.checkEnoughPaintForRoom(room) === true){
         let toPaint = room.area;
