@@ -1,5 +1,3 @@
-const PaintCan = require("./paint_can"); 
-
 const Decorator = function(name){
 
     this.name       = name;
@@ -14,12 +12,19 @@ Decorator.prototype.addPaintCan = function(paintCan){
 Decorator.prototype.getTotalPaint = function(){
     let output = 0;
     for(let can of this.paintStock){
-        console.log(can.paintLevel);
         output += can.paintLevel;
     };
     return output;
 };
 
+Decorator.prototype.checkEnoughPaintForRoom = function(room){
+    if (this.getTotalPaint < room.area){
+        return false;
+    }
+    else{
+        return true;
+    }
+}
 
 
 

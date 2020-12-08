@@ -28,7 +28,8 @@ describe("PaintCan", function(){
     });
 
     it("should not let you remove paint if empty", function(){
-        assert.strictEqual(paintCanEmpty.removePaint(3), "This paint can is empty")
+        assert.strictEqual(paintCanEmpty.removePaint(3), 
+        "This paint can is empty")
     });
 
 })
