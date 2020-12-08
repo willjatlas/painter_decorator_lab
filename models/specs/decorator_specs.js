@@ -18,5 +18,10 @@ describe("Decorator", function(){
         assert.deepStrictEqual(decorator.paintStock, []);
     });
 
+    it("should be able to add paint cans to their paint stock", function(){
+        decorator.addPaintCan(paint1);
+        assert.deepStrictEqual(decorator.paintStock, [paint1]);
+    });
+
 
 });

@@ -5,6 +5,10 @@ const Decorator = function(name){
 
 };
 
+Decorator.prototype.addPaintCan = function(paintCan){
+    this.paintStock.push(paintCan);
+};
+
 
 
 
