@@ -23,5 +23,11 @@ describe("Decorator", function(){
         assert.deepStrictEqual(decorator.paintStock, [paint1]);
     });
 
+    it("should be able to calculate the total litres of paint in stock", function(){
+        decorator.addPaintCan(paint1);
+        decorator.addPaintCan(paint2);
+        assert.strictEqual(decorator.getTotalPaint(), 17);
+    });
+
 
 });
