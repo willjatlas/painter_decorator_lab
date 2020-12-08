@@ -42,4 +42,18 @@ describe("Decorator", function(){
         decorator.addPaintCan(paint2);
         assert.strictEqual(decorator.checkEnoughPaintForRoom(room), false);
     });
+
+    it("should be able to paint a room if they have anough paint",
+    function(){
+        decorator.addPaintCan(paint1)
+        decorator.paintRoom(room);
+        assert.strictEqual(room.isPainted, true);
+    });
+
+    it("should say you can't paint a room if not enough paint", 
+    function(){
+        decorator.addPaintCan(paint2)
+        decorator.paintRoom(room);
+        assert.strictEqual(room.isPainted, false);
+    });
 });
