@@ -72,4 +72,12 @@ describe("Decorator", function(){
         decorator.paintRoom(bigRoom);
         assert.strictEqual(decorator.getTotalPaint(), 5);
     });
+
+    it("should remove cans if they have run out of paint", 
+    function(){
+        decorator.addPaintCan(paint1);
+        decorator.addPaintCan(paint2);
+        decorator.paintRoom(bigRoom);
+        assert.deepStrictEqual(decorator.paintStock, [paint2]);
+    })
 });
