@@ -78,6 +78,6 @@ describe("Decorator", function(){
         decorator.addPaintCan(paint1);
         decorator.addPaintCan(paint2);
         decorator.paintRoom(bigRoom);
-        assert.deepStrictEqual(decorator.paintStock, [paint2]);
+        assert.deepStrictEqual(decorator.getTotalPaint(), 5);
     })
 });

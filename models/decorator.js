@@ -54,10 +54,10 @@ Decorator.prototype.paintRoom = function(room){
         for(let can of this.paintStock){
             if(can.isPaintCanEmpty !== true){
                 if(can.paintLevel <= toPaint){
-                    let wall = toPaint;
-                    let canLevel  = can.paintLevel;
-                    let over = wall - canLevel;
-                    toPaint = over;
+                    let wall     =  toPaint;
+                    let canLevel =  can.paintLevel;
+                    let over     =  wall - canLevel;
+                    toPaint      =  over;
                 }
                 else{
                     can.removePaint(toPaint)
@@ -65,7 +65,6 @@ Decorator.prototype.paintRoom = function(room){
                 }
             };
         };
-        
         this.paintStock = newStock;
         room.paintRoom();
     };  
