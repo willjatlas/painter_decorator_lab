@@ -22,13 +22,8 @@ Decorator.prototype.getTotalPaint = function(){
 };
 
 Decorator.prototype.checkEnoughPaintForRoom = function(room){
-    if (this.getTotalPaint() >= room.area){
-        return true;
-    }
-    else{
-        return false;
-    };
-};
+    return this.getTotalPaint() >= room.area;
+}; 
 
 Decorator.prototype.paintRoom = function(room){
     if(this.checkEnoughPaintForRoom(room) === true){

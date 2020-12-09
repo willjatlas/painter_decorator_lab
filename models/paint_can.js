@@ -5,12 +5,7 @@ const PaintCan = function(paintLevel){
 };
 
 PaintCan.prototype.isPaintCanEmpty = function(){
-    if (this.paintLevel > 0){
-        return false; 
-    }
-    else{
-        return true;
-    }
+    return this.paintLevel === 0;
 };
 
 PaintCan.prototype.removePaint = function(amount){
@@ -18,6 +13,5 @@ PaintCan.prototype.removePaint = function(amount){
         this.paintLevel -= amount;
     }
 };
-
 
 module.exports = PaintCan;
